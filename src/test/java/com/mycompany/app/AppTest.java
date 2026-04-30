@@ -35,6 +35,7 @@ public class AppTest
         assertTrue("XCII".compareTo(IntegerToRoman.convert(92)) == 0);
         assertTrue("LVIII".compareTo(IntegerToRoman.convert(58)) == 0);
         assertTrue("CMXCIV".compareTo(IntegerToRoman.convert(994)) == 0);
+        assertTrue("MDCLXVI".compareTo(IntegerToRoman.convert(1666)) == 0);
         
     }
 
