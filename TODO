@@ -5,8 +5,13 @@
 • Definizione delle attività nel Issue Traking System
   ◦ Suddividere le attività tra i due sviluppatori
 # • Creazione del progetto utilizzando l’archetipo maven quick start
-• Configurazione del processo di build
+# • Configurazione del processo di build
 # • attivazione e configurazione dell’analisi statica (code covrage e errori)
 • Predisposizione della Build Automation con GitHub Actions
 • Sviluppo del codice sorgente e dei test
 
+errori in
+start target/site/checkstyle.html
+
+code covrage
+start target/site/jacoco/index.html

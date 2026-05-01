@@ -2,42 +2,7 @@
 <!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
 "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <module name="Checker">
-  <property name="severity" value="error"/>
-
   <module name="RegexpHeader">
-    <property name="headerFile" value="checkstyle-header.txt"/>
-  </module>
-
-  <module name="FileTabCharacter"/>
-  <module name="LineLength">
-    <property name="max" value="120"/>
-    <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://"/>
-  </module>
-
-  <module name="TreeWalker">
-    <module name="AvoidStarImport"/>
-    <module name="ConstantName"/>
-    <module name="EmptyBlock"/>
-    <module name="JavadocMethod"/>
-    <module name="MagicNumber">
-      <property name="ignoreNumbers" value="-1,0,1,2"/>
-      <property name="ignoreHashCodeMethod" value="true"/>
-      <property name="ignoreAnnotation" value="true"/>
-    </module>
-    <module name="MethodName"/>
-    <module name="ModifierOrder"/>
-    <module name="NeedBraces"/>
-    <module name="OneStatementPerLine"/>
-    <module name="ParameterName"/>
-    <module name="RegexpSinglelineJava">
-      <property name="format" value="\s+$"/>
-      <property name="message" value="Line has trailing spaces."/>
-      <property name="ignoreComments" value="true"/>
-    </module>
-    <module name="SeparatorWrap">
-      <property name="option" value="eol"/>
-    </module>
-    <module name="WhitespaceAround"/>
-    <module name="WhitespaceAfter"/>
+  <property name="headerFile" value="${checkstyle.header.file}"/>
   </module>
 </module>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RomanPrinter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">prova_pratica</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.app</a> &gt; <span class="el_source">RomanPrinter.java</span></div><h1>RomanPrinter.java</h1><pre class="source lang-java linenums">// prova pratica
+
+package com.mycompany.app;
+
+<span class="nc" id="L5">public class RomanPrinter {</span>
+  public static String print(int num){
+<span class="fc" id="L7">    return printAsciiArt(IntegerToRoman.convert(num));</span>
+  }
+
+<span class="fc" id="L10">  static char[] symbols = {'M', 'D', 'C', 'L', 'X', 'V', 'I'};</span>
+<span class="fc" id="L11">  static String[] asciiArt = {</span>
+            &quot;  __  __  &quot;,            &quot; |  \\/  | &quot;,            &quot; | \\  / | &quot;,            &quot; | |\\/| | &quot;,            &quot; | |  | | &quot;,            &quot; |_|  |_| &quot;,            &quot;  _____   &quot;,            &quot; |  __ \\  &quot;,            &quot; | |  | | &quot;,            &quot; | |  | | &quot;,            &quot; | |__| | &quot;,            &quot; |_____/  &quot;,            &quot;   _____  &quot;,            &quot;  / ____| &quot;,            &quot; | |      &quot;,            &quot; | |      &quot;,            &quot; | |____  &quot;,            &quot;  \\_____| &quot;,            &quot;  _       &quot;,            &quot; | |      &quot;,            &quot; | |      &quot;,            &quot; | |      &quot;,            &quot; | |____  &quot;,            &quot; |______| &quot;,            &quot; __    __ &quot;,            &quot; \\ \\  / / &quot;,            &quot;  \\ \\/ /  &quot;,            &quot;   &gt;  &lt;   &quot;,            &quot;  / /\\ \\  &quot;,            &quot; /_/  \\_\\ &quot;,            &quot;__      __&quot;,            &quot;\\ \\    / /&quot;,            &quot; \\ \\  / / &quot;,            &quot;  \\ \\/ /  &quot;,            &quot;   \\  /   &quot;,            &quot;    \\/    &quot;,            &quot;  ______  &quot;,            &quot; |_    _| &quot;,            &quot;   |  |   &quot;,            &quot;   |  |   &quot;,            &quot;  _|  |_  &quot;,            &quot; |______| &quot;
+    
+  };
+<span class="fc" id="L15">  static int line_high = 6;</span>
+
+  private static String printAsciiArt(String romanNumber){
+<span class="fc" id="L18">    String result = &quot;&quot;;</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">    for (int i = 0; i &lt; line_high; i++) {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">      for (char c : romanNumber.toCharArray()) {</span>
+<span class="fc" id="L21">        int index = -1;</span>
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">        for (int j = 0; j &lt; symbols.length; j++)</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">          if (symbols[j] == c) {</span>
+<span class="fc" id="L24">            index = j;</span>
+<span class="fc" id="L25">            break;</span>
+          }
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        if (index != -1)</span>
+<span class="fc" id="L28">          result += asciiArt[index * line_high + i];</span>
+      }
+<span class="fc" id="L30">      result += &quot;\n&quot;;</span>
+    }
+<span class="fc" id="L32">    return result;</span>
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
